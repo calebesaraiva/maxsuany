@@ -282,6 +282,13 @@ header::after {
   .section-heading p {
     font-size: 0.9rem;
   }
+
+  .about-section,
+  .services-section,
+  .tabs-section,
+  .final-cta {
+    scroll-margin-top: 86px;
+  }
 }
 
 .header-content {
@@ -299,6 +306,8 @@ header::after {
   .header-content {
     flex-wrap: nowrap;
     gap: 0.65rem;
+    width: 100%;
+    min-width: 0;
   }
 
   .logo-btn img {
@@ -311,6 +320,7 @@ header::after {
     font-size: 0.68rem;
     letter-spacing: 0.08em;
     white-space: nowrap;
+    flex: 0 0 auto;
   }
 }
 .logo h1 {
@@ -440,6 +450,13 @@ header::after {
   gap: 4rem;
 }
 
+@media (max-width: 480px) {
+  .hero .container {
+    justify-content: center;
+    gap: 0;
+  }
+}
+
 .hero-container {
   display: flex !important;
   align-items: center;
@@ -474,6 +491,7 @@ header::after {
 @media (max-width: 480px) {
   .hero-text {
     max-width: 100%;
+    width: 100%;
     text-align: center;
     padding-top: 0;
     padding-bottom: 0;
@@ -561,6 +579,8 @@ header::after {
     border-radius: 22px;
     background: rgba(10, 10, 10, 0.46);
     backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 22.5rem;
   }
 }
 
@@ -583,6 +603,27 @@ header::after {
   font-size: 0.76rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .hero-signature {
+    width: 100%;
+    max-width: 23rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+    margin-top: 1.35rem;
+  }
+
+  .hero-signature span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0.55rem 0.35rem;
+    font-size: clamp(0.57rem, 2.6vw, 0.68rem);
+    letter-spacing: 0.1em;
+  }
 }
 
 .hero-signature span {
@@ -661,6 +702,7 @@ header::after {
 @media (max-width: 480px) {
   .about-container {
     gap: 1.5rem;
+    justify-items: center;
   }
 }
 
@@ -760,6 +802,15 @@ header::after {
 
   .about-text h3::after {
     width: 64px;
+  }
+
+  .about-text,
+  .about-text p {
+    width: 100%;
+  }
+
+  .about-text .eyebrow {
+    justify-content: flex-start;
   }
 }
 
@@ -868,6 +919,7 @@ header::after {
   .stat-card {
     padding: 0.95rem;
     text-align: center;
+    width: 100%;
   }
 }
 
@@ -897,6 +949,13 @@ header::after {
   gap: 1.25rem;
   margin-top: 2.25rem;
   transform-style: preserve-3d;
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .service-card {
@@ -995,6 +1054,17 @@ header::after {
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  .section-heading {
+    width: 100%;
+    margin-bottom: 1.45rem;
+  }
+
+  .section-heading .eyebrow {
+    width: 100%;
+  }
+}
+
 .section-heading .eyebrow {
   justify-content: center;
 }
@@ -1053,7 +1123,8 @@ header::after {
     gap: 0.5rem;
     margin-bottom: 1.5rem;
     justify-content: flex-start;
-    padding: 0 0.75rem;
+    padding: 0 0 0.35rem;
+    scroll-padding-inline: 1rem;
     -webkit-overflow-scrolling: touch;
   }
 }
@@ -1067,8 +1138,9 @@ header::after {
 
 @media (max-width: 480px) {
   .tab-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    flex: 0 0 auto;
+    padding: 0.55rem 1rem;
+    font-size: 0.78rem;
   }
 }
 
@@ -1269,7 +1341,8 @@ footer {
 
   .final-cta-card {
     border-radius: 28px;
-    padding: 2rem 1.1rem;
+    padding: 2.25rem 1.1rem;
+    width: 100%;
   }
 
   .final-cta-card::before {
@@ -1279,6 +1352,7 @@ footer {
 
   .final-cta-card p {
     font-size: 0.92rem;
+    max-width: 100%;
   }
 }
 
@@ -1328,6 +1402,27 @@ footer::before {
 
   .social-links {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-signature span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0.55rem 0.35rem;
+    font-size: clamp(0.57rem, 2.6vw, 0.68rem);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .about-text,
+  .services-grid,
+  .grid-gallery,
+  .final-cta-card {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
