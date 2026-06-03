@@ -211,7 +211,7 @@ function App() {
               }}
               className="about-img-wrapper"
             >
-              <img src="/assets/home page secundario.jpeg" alt="Maxsuany Silva - Cerimonialista" />
+              <img src="/assets/optimized/about.jpg" alt="Maxsuany Silva - Cerimonialista" />
             </motion.div>
 
             <motion.div
@@ -333,7 +333,7 @@ function App() {
                         }}
                       >
                         <img
-                          src={`/assets/${tabs.find(t => t.id === activeTab)?.folder || ''}/${img}`}
+                          src={`/assets/optimized/${tabs.find(t => t.id === activeTab)?.folder || ''}/${img}`}
                           alt={`${activeTab} foto ${idx + 1}`}
                           className="gallery-img"
                           loading="lazy"
